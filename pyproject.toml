@@ -33,15 +33,13 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/aniruddha/missiontrace-python"
-Repository = "https://github.com/aniruddha/missiontrace-python"
-Issues = "https://github.com/aniruddha/missiontrace-python/issues"
+Homepage = "https://github.com/AniLeo-01/missiontrace-python"
+Repository = "https://github.com/AniLeo-01/missiontrace-python"
+Issues = "https://github.com/AniLeo-01/missiontrace-python/issues"
 
 [project.optional-dependencies]
 openai = ["openai>=1.0"]
 tinyfish = ["tinyfish>=0.2"]
-all-llm = ["openai>=1.0"]
-all-agents = ["tinyfish>=0.2"]
 all = ["openai>=1.0", "tinyfish>=0.2"]
 dev = [
     "pytest>=7.0",
