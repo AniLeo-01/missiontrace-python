@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "missiontrace"
+version = "0.1.0"
+description = "Observability and tracing SDK for AI agent systems"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+readme = "README.md"
+authors = [
+    {name = "Aniruddha Mandal", email = "aniruddha1.2.3.3.2.1@gmail.com"},
+]
+keywords = ["observability", "tracing", "ai", "agents", "llm", "opentelemetry"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Monitoring",
+]
+
+dependencies = [
+    "pydantic>=2.0",
+    "opentelemetry-api>=1.20",
+    "opentelemetry-sdk>=1.20",
+    "opentelemetry-exporter-otlp-proto-http>=1.20",
+]
+
+[project.urls]
+Homepage = "https://github.com/aniruddha/missiontrace-python"
+Repository = "https://github.com/aniruddha/missiontrace-python"
+Issues = "https://github.com/aniruddha/missiontrace-python/issues"
+
+[project.optional-dependencies]
+openai = ["openai>=1.0"]
+tinyfish = ["tinyfish>=0.2"]
+all-llm = ["openai>=1.0"]
+all-agents = ["tinyfish>=0.2"]
+all = ["openai>=1.0", "tinyfish>=0.2"]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["missiontrace*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
